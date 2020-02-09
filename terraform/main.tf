@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "aci-rg" {
-  name     = "aci-vsts"
-  location = "westus2"
+  name     = "aci-azure-devops"
+  location = "UK South"
 }
 
 resource "random_id" "randomId" {
@@ -38,7 +38,7 @@ resource "azurerm_container_group" "aci-vsts" {
 
   container {
     name   = "vsts-agent"
-    image  = "lenisha/vsts-agent-infrastructure"
+    image  = "marcusjamesadams/vsts-agent-infrastructure"
     cpu    = "0.5"
     memory = "1.5"
     port   = "80"
